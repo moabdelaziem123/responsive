@@ -1,0 +1,164 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+list-style: none;
+text-decoration: none;
+font-family: 'Poppins',sans-serif;
+}
+
+header{
+position: fixed;
+top: 0;
+right: 0;
+padding: 30px 16%;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background: transparent;
+z-index: 10001;
+transition: 0.5s ease;
+}
+
+.logo img{
+width: 150px;
+height: auto;
+}
+
+.navbar{
+display: flex;
+}
+
+.navbar a{
+display: inline-block;
+color: #040000;
+font-size: 16px;
+font-weight: 500;
+padding: 10px 20px ;
+margin: 0 5px;
+letter-spacing: 1px;
+transition: 0.5s;
+}
+
+.navbar a:hover{
+background: #a32e37;
+color: #fff;
+}
+
+.navbar.active{
+background: #a32e37;
+color: #fff;
+}
+
+#menu-icon{
+font-size: 40px;
+cursor: pointer;
+z-index: 1001;
+display: none;
+}
+
+/* main */
+
+section{
+padding: 0 16%;
+}
+
+.main{
+position: relative;
+width: 100%;
+height: 100vh;
+background: url(background.jpg);
+background-size: cover;
+background-position: center;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.main-text h1{
+font-size: 90px;
+color: #fff;
+max-width: 200px;
+line-height: 1.1;
+margin: 0 0 60px;
+}
+
+button{
+display: inline-block;
+width: 200px;
+height: 58px;
+background: #a32e37;
+color: #fff;
+outline: none;
+border: none;
+padding: 10px 20px;
+font-size: 20px;
+font-weight: 400;
+cursor: pointer;
+transition: 0.5s ease;
+}
+
+button:hover{
+transform: scale(0.9);
+background: #fff;
+color: #a32e37;
+}
+
+.left{
+position: absolute;
+left: 7%;
+top: 50%;
+transform: translateY(-50%);
+}
+
+.right{
+position: absolute;
+right: 7%;
+top: 50%;
+transform: translateY(-50%);
+}
+
+/* Responsive */
+
+@media(max-width:1000px){
+header{
+padding: 10px 5%;
+}
+
+.main-text h1{
+font-size: 80px;
+transition: 0.5s ease;
+}
+
+
+}
+
+@media(max-width:990px){
+#menu-icon{
+display: block;
+}
+.navbar {
+position: absolute;
+top: -700px;
+right: 0;
+left: 0;
+flex-direction: column;
+background: rgba(8,5,0,0.9);
+text-align: left;
+}
+.navbar a{
+display: block;
+padding: 1rem;
+margin: 0.5rem;
+border-left: 2px solid #fff;
+color: #fff;
+
+}
+
+.navbar.open{
+top: 100%;
+
+}
+
+}
